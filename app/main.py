@@ -1,14 +1,17 @@
 import streamlit as st
-from components.header import setup_page
 from components.content import chat_area
 from components.sidebar import sidebar_area
 
 
 def main():
-    setup_page()
+    st.set_page_config(page_title="Bot do investidor", page_icon=":robot_face:")
+    st.subheader("🤖 Acompanhe seus FIIs", divider=True)
+
     with st.sidebar:
         sidebar_area()
-    chat_area()
+
+    if 'chat' in st.session_state:
+        chat_area()
 
 
 if __name__ == "__main__":

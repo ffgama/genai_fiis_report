@@ -1,10 +1,7 @@
 import streamlit as st
 from langchain_openai import ChatOpenAI
 from langchain_groq import ChatGroq
-from langchain.prompts import ChatPromptTemplate
 from components.utils import load_pdf_document
-import tempfile
-
 
 def sidebar_area():
     EXT_TYPE_FILES = ["PDF", "CSV", "URL"]
